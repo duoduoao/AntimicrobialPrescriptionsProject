@@ -1,8 +1,11 @@
-# Antimicrobial Prescriptions System
+# Antimicrobial Prescriptions Project
 
-## System Overview
+## Backend Overview
 The **AntimicrobialPrescriptions** system is a **.NET Web API** designed to manage antimicrobial prescriptions in healthcare environments.  
 It provides secure endpoints for creating, updating, and tracking prescriptions across their lifecycle stages.  
+## Frontend Overview 
+The **AntimicrobialPrescriptions.WebAngular** application is a healthcare managment system designed to facilitate the creation, review, and monitoring of antimicrobial prescriptions in clinical setting.The system implements a role-based workflow where clinicians can create and manage prescriptions, while infection control specialists can review and analyze prescription patterns for compliance and safety monitoring.  
+ 
 
 ---
 
@@ -12,8 +15,8 @@ It provides secure endpoints for creating, updating, and tracking prescriptions 
 - Infection Control users can review and discontinue prescriptions.  
 - Track prescription status: **Active**, **Reviewed**, **Discontinued**.  
 - Display reports grouped by:  **Drug**, **Indication**, **Duration**.   
-- Role-based access control: **Clinician**, **Infection Control**.  
-- Audit logging of changes to prescriptions.  
+- Role-based access control: **Clinician**, **Infection Control**.  (Bug Need Fix)
+- Audit logging of changes to prescriptions.  (TO DO)
 
 ---
 
@@ -49,7 +52,7 @@ cd AntimicrobialPrescriptions
 2. Restore dependencies:  
 dotnet restore
  
-3. Configure `appsettings.json` (optional):  
+3. Configure `appsettings.json` (No need for Demo):  
 - SQL Server database connection  
 - JWT authentication settings
   
@@ -79,6 +82,9 @@ App will run on [http://localhost:4200](http://localhost:4200).
 - Build Docker images for both backend and frontend.  
 - Use Docker Compose for running services with environment-based configurations.  
 
+### CI/CD Pipeline  (TO DO)
+- YAML pipeline for Azure DevOps / Git
+  
 ---
 
 ## Backend Structure
@@ -87,7 +93,7 @@ The backend follows a **Clean Architecture** with four distinct layers:
 - **Application** – Use cases and validation logic  
 - **Infrastructure** – Database (EF Core), external services, repositories  
 - **API** – Controllers, JWT authentication, middleware, entry point  
-
+Test cases are created for each layer.
 
 ---
 
@@ -101,11 +107,11 @@ The frontend is built with **Angular 22** and integrates with the API via **JWT 
 ### UI Capabilities
 - **Role-based Actions**  
 - **Clinician**  
- - View prescriptions  
- - Add prescription: create new prescription  
+ -- Prescriptions: View prescriptions with filter function
+ -- Add prescription: create new prescription  
 - **Infection Control**  
- - Review, discontinue, and manage prescriptions  
- - Reports: Generate grouped summaries (by antimicrobial name, indication, duration)  
+ -- Infection Control: Review, discontinue prescriptions  
+ -- Reports: Generate grouped summaries (by antimicrobial name, indication, duration)  
 
 - **Dashboard**  
 - Central navigation hub for authenticated users  
