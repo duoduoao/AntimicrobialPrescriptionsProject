@@ -26,6 +26,18 @@ The **AntimicrobialPrescriptions.WebAngular** application is a healthcare managm
 - **Database**: SQL Server  
 
 ---
+## Project Components and Key Files
+
+| Component          | Purpose                                      | Key Files / Folder                                       |
+|--------------------|----------------------------------------------|---------------------------------------------------------|
+| **Backend API**       | Provides RESTful endpoints for prescription management | `src/AntimicrobialPrescriptions.API`                    |
+| **Application Layer** | Contains business logic and use cases       | `src/AntimicrobialPrescriptions.Application`              |
+| **Domain Layer**      | Defines core entities and business rules    | `src/AntimicrobialPrescriptions.Domain`                   |
+| **Infrastructure Layer** | Manages data access and external services | `src/AntimicrobialPrescriptions.Infrastructure`           |
+| **Angular Frontend**  | Implements user interface and client-side logic | `AntimicrobialPrescriptions.WebAngular`                   |
+
+This modular architecture ensures clear separation of concerns, making the system maintainable, scalable, and testable.
+
 
 ## API Design
 
@@ -39,6 +51,34 @@ The **AntimicrobialPrescriptions.WebAngular** application is a healthcare managm
 - `PUT /api/Prescriptions/{id}` – Update an existing prescription  
 - `POST /api/Prescriptions/{id}/review` – Mark prescription as reviewed  
 - `POST /api/Prescriptions/{id}/discontinue` – Discontinue prescription  
+
+
+## Clinician Workflow Steps
+
+1. **Authentication**  
+   Clinicians log in using their credentials via the endpoint
+2. **Dashboard Access**  
+   Upon successful login, clinicians access a centralized dashboard for managing prescriptions.
+3. **View Prescriptions**  
+   Clinicians can view the list of prescriptions with filtering options 
+4. **Create Prescriptions**  
+   New antimicrobial prescriptions can be submitted by clinicians 
+5. **Update Prescriptions (TO DO)**  
+   Existing prescriptions can be modified by clinicians via
+
+## Infection Control Workflow Steps
+
+1. **Authentication**  
+   Infection Control users log in by sending credentials to the API endpoint
+2. **Dashboard Access**  
+   After authentication, users navigate to a specialized Infection Control interface/dashboard tailored to their role.
+3. **Review Prescriptions**  
+   Infection Control users review antimicrobial prescriptions by marking them as reviewed
+4. **Discontinue Prescriptions**  
+   Users can discontinue active prescriptions to stop antimicrobial treatment
+5. **Generate Reports**  
+   Generate summaries and reports grouped by drug, indication, or prescription duration to monitor antimicrobial use.
+
 
 ---
 
@@ -87,35 +127,16 @@ App will run on [http://localhost:4200](http://localhost:4200).
   
 ---
 
-## Backend Structure
-The backend follows a **Clean Architecture** with four distinct layers:  
-- **Domain** – Core business logic and entities  
-- **Application** – Use cases and validation logic  
-- **Infrastructure** – Database (EF Core), external services, repositories  
-- **API** – Controllers, JWT authentication, middleware, entry point  
-Test cases are created for each layer.
+### Future Enhancements 
+The system has several planned improvements to improve deployment, maintainability, and monitoring:
+- **Docker Containerization**: Automate build and deployment by containerizing both backend (.NET Core Web API) and frontend (Angular) applications for consistent environments and easy scalability.
+- **CI/CD Pipeline**: Integrate Azure DevOps pipelines to automate continuous integration and continuous deployment, including building, testing, and deploying the full stack application.
+- **Enhanced Logging**: Implement Serilog for structured and comprehensive logging to facilitate diagnostics and tracking of system behavior.
+- **Input Validation**: Integrate FluentValidation to enhance input validation capabilities both on the API and frontend layers, ensuring data integrity and user feedback.
+- **Audit Logging**: Develop a comprehensive audit logging mechanism to track changes to antimicrobial prescriptions and user actions, supporting compliance and traceability.
 
----
+These enhancements will align the system with modern DevOps practices and enterprise-grade quality standards.
 
-## Frontend Structure
-The frontend is built with **Angular 22** and integrates with the API via **JWT tokens**.  
-
-### Authentication and Roles
-- **Clinician** – Can create, view, and manage prescriptions  
-- **Infection Control** – Can review, discontinue prescriptions, and view reports  
-
-### UI Capabilities
-- **Role-based Actions**  
-- **Clinician**  
- -- Prescriptions: View prescriptions with filter function
- -- Add prescription: create new prescription  
-- **Infection Control**  
- -- Infection Control: Review, discontinue prescriptions  
- -- Reports: Generate grouped summaries (by antimicrobial name, indication, duration)  
-
-- **Dashboard**  
-- Central navigation hub for authenticated users  
-- Provides access to prescription management, reviews, and reports
 
 ## Test Users (Hard-Coded)
 
