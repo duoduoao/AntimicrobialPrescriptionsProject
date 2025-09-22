@@ -22,7 +22,7 @@ The **AntimicrobialPrescriptions.WebAngular** application is a healthcare managm
 
 ## Tech Stack
 - **Backend**: .NET 9 Web API, Entity Framework Core, FluentValidation (TO DO), Serilog (TO DO), JWT authentication  
-- **Frontend**: Angular 22  
+- **Frontend**: Angular 20  
 - **Database**: SQL Server  
 
 ---
