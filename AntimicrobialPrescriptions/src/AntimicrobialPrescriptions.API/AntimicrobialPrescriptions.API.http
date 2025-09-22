@@ -1,0 +1,6 @@
+@AntimicrobialPrescriptions.API_HostAddress = http://localhost:5219
+
+# GET {{AntimicrobialPrescriptions.API_HostAddress}}/weatherforecast/
+# Accept: application/json
+
+###

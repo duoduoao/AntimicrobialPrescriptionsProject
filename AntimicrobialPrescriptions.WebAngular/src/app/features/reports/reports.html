@@ -1,0 +1,25 @@
+<h2>Prescription Reports</h2>
+
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="error" class="error">{{ error }}</div>
+
+<table *ngIf="groupedData.length > 0" border="1" cellpadding="5" cellspacing="0">
+  <thead>
+    <tr>
+      <th>Drug</th>
+      <th>Indication</th>
+      <th>Duration (days)</th>
+      <th>Prescriptions Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of groupedData">
+      <td>{{ row.drug }}</td>
+      <td>{{ row.indication }}</td>
+      <td>{{ row.duration }}</td>
+      <td>{{ row.count }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div *ngIf="!loading && groupedData.length === 0">No data available.</div>

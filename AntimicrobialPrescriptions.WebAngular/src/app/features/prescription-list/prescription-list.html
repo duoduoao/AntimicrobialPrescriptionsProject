@@ -1,0 +1,42 @@
+<h2>Prescriptions</h2>
+
+<label>
+  Status:
+  <select [(ngModel)]="filterStatus">
+    <option [ngValue]="'All'">All</option>
+    <option [ngValue]="PrescriptionStatus.Active">Active</option>
+    <option [ngValue]="PrescriptionStatus.Reviewed">Reviewed</option>
+    <option [ngValue]="PrescriptionStatus.Discontinued">Discontinued</option>
+  </select>
+</label>
+
+<label>
+  Filter by Drug:
+  <input [(ngModel)]="filterByDrug" placeholder="Drug name" />
+</label>
+
+<div *ngIf="filteredPrescriptions().length === 0">No prescriptions found.</div>
+
+<table class="prescription-list" *ngIf="filteredPrescriptions().length > 0">
+  <thead>
+    <tr>
+      <th>Patient ID</th>
+      <th>Drug</th>
+      <th>Indication</th>
+      <th>Status</th>
+      <th *ngIf="canReview()">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of filteredPrescriptions()">
+      <td>{{ p.patientId }}</td>
+      <td>{{ p.antimicrobialName }}</td>
+      <td>{{ p.indication }}</td>
+      <td>{{ PrescriptionStatus[p.status] }}</td>
+      <td *ngIf="canReview()">
+        <button (click)="reviewPrescription(p)" [disabled]="p.status !== PrescriptionStatus.Active">Review</button>
+        <button (click)="discontinuePrescription(p)" [disabled]="p.status === PrescriptionStatus.Discontinued">Discontinue</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
