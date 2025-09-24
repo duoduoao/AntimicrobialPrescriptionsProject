@@ -1,0 +1,14 @@
+<h2>Add Prescription</h2>
+<form (submit)="submit($event)">
+  <label>Patient ID: <input [(ngModel)]="patientId" name="patientId" required /></label><br />
+  <label>Antimicrobial Name: <input [(ngModel)]="antimicrobialName" name="antimicrobialName" required /></label><br />
+  <label>Dose: <input [(ngModel)]="dose" name="dose" /></label><br />
+  <label>Frequency: <input [(ngModel)]="frequency" name="frequency" /></label><br />
+  <label>Route: <input [(ngModel)]="route" name="route" /></label><br />
+  <label>Indication: <input [(ngModel)]="indication" name="indication" /></label><br />
+  <label>Start Date: <input [(ngModel)]="startDate" name="startDate" type="date" /></label><br />
+  <label>Expected End Date: <input [(ngModel)]="expectedEndDate" name="expectedEndDate" type="date" /></label><br />
+  <label>Prescriber Name: <input [(ngModel)]="prescriberName" name="prescriberName" /></label><br />
+  <p>Role: {{ prescriberRole }}</p>
+  <button type="submit">Submit Prescription</button>
+</form>

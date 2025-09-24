@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntimicrobialPrescriptions.Domain", "src\AntimicrobialPrescriptions.Domain\AntimicrobialPrescriptions.Domain.csproj", "{1254B549-9E73-4D92-A929-B0451B739D4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntimicrobialPrescriptions.Application", "src\AntimicrobialPrescriptions.Application\AntimicrobialPrescriptions.Application.csproj", "{4C6D09DB-A291-4691-9B64-0B654E85B97E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntimicrobialPrescriptions.Infrastructure", "src\AntimicrobialPrescriptions.Infrastructure\AntimicrobialPrescriptions.Infrastructure.csproj", "{85F5CF57-900B-4754-90A8-33A9E658466B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntimicrobialPrescriptions.API", "src\AntimicrobialPrescriptions.API\AntimicrobialPrescriptions.API.csproj", "{788BE355-72D6-44D9-9596-EE808E133A87}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{90328FA8-D30E-4CCD-BD8B-4ACA95634EE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntimicrobialPrescriptions.Application.Tests", "tests\AntimicrobialPrescriptions.Application.Tests\AntimicrobialPrescriptions.Application.Tests.csproj", "{97E23E2E-E9F4-4C8A-8424-C719697EA543}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntimicrobialPrescriptions.Domain.Tests", "tests\AntimicrobialPrescriptions.Domain.Tests\AntimicrobialPrescriptions.Domain.Tests.csproj", "{7460F18B-BF86-43CD-A680-0E29B97F417A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntimicrobialPrescriptions.Infrastructure.Tests", "tests\AntimicrobialPrescriptions.Infrastructure.Tests\AntimicrobialPrescriptions.Infrastructure.Tests.csproj", "{0657D707-AA4F-406D-B31D-876E466C28B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntimicrobialPrescriptions.API.Tests", "tests\AntimicrobialPrescriptions.API.Tests\AntimicrobialPrescriptions.API.Tests.csproj", "{D50527CE-6B03-4730-BB6F-C60F4B2FDA0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1254B549-9E73-4D92-A929-B0451B739D4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1254B549-9E73-4D92-A929-B0451B739D4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1254B549-9E73-4D92-A929-B0451B739D4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1254B549-9E73-4D92-A929-B0451B739D4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C6D09DB-A291-4691-9B64-0B654E85B97E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C6D09DB-A291-4691-9B64-0B654E85B97E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C6D09DB-A291-4691-9B64-0B654E85B97E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C6D09DB-A291-4691-9B64-0B654E85B97E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85F5CF57-900B-4754-90A8-33A9E658466B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85F5CF57-900B-4754-90A8-33A9E658466B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85F5CF57-900B-4754-90A8-33A9E658466B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85F5CF57-900B-4754-90A8-33A9E658466B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{788BE355-72D6-44D9-9596-EE808E133A87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{788BE355-72D6-44D9-9596-EE808E133A87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{788BE355-72D6-44D9-9596-EE808E133A87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{788BE355-72D6-44D9-9596-EE808E133A87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97E23E2E-E9F4-4C8A-8424-C719697EA543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97E23E2E-E9F4-4C8A-8424-C719697EA543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97E23E2E-E9F4-4C8A-8424-C719697EA543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97E23E2E-E9F4-4C8A-8424-C719697EA543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7460F18B-BF86-43CD-A680-0E29B97F417A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7460F18B-BF86-43CD-A680-0E29B97F417A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7460F18B-BF86-43CD-A680-0E29B97F417A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7460F18B-BF86-43CD-A680-0E29B97F417A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0657D707-AA4F-406D-B31D-876E466C28B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0657D707-AA4F-406D-B31D-876E466C28B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0657D707-AA4F-406D-B31D-876E466C28B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0657D707-AA4F-406D-B31D-876E466C28B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D50527CE-6B03-4730-BB6F-C60F4B2FDA0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D50527CE-6B03-4730-BB6F-C60F4B2FDA0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D50527CE-6B03-4730-BB6F-C60F4B2FDA0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D50527CE-6B03-4730-BB6F-C60F4B2FDA0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1254B549-9E73-4D92-A929-B0451B739D4F} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{4C6D09DB-A291-4691-9B64-0B654E85B97E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{85F5CF57-900B-4754-90A8-33A9E658466B} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{788BE355-72D6-44D9-9596-EE808E133A87} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{97E23E2E-E9F4-4C8A-8424-C719697EA543} = {90328FA8-D30E-4CCD-BD8B-4ACA95634EE2}
+		{7460F18B-BF86-43CD-A680-0E29B97F417A} = {90328FA8-D30E-4CCD-BD8B-4ACA95634EE2}
+		{0657D707-AA4F-406D-B31D-876E466C28B2} = {90328FA8-D30E-4CCD-BD8B-4ACA95634EE2}
+		{D50527CE-6B03-4730-BB6F-C60F4B2FDA0C} = {90328FA8-D30E-4CCD-BD8B-4ACA95634EE2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A544F87-F901-403F-98C2-95B9F8E2B08C}
+	EndGlobalSection
+EndGlobal

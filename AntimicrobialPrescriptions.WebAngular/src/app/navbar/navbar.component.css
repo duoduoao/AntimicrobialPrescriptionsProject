@@ -1,0 +1,14 @@
+.navbar {
+  background: #f8fafc;
+  padding: 12px 20px;
+  border-bottom: 1px solid #ccc;
+}
+.navbar a {
+  margin: 0 8px;
+  color: #2f363d;
+  text-decoration: none;
+}
+.active-link {
+  font-weight: bold;
+  color: #0074d9;
+}

@@ -1,0 +1,24 @@
+# Visual Studio & .NET Core
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.log
+*.pdb
+*.dll
+*.exe
+
+# npm and Angular
+node_modules/
+dist/
+.angular/
+package-lock.json
+yarn.lock
+
+# Angular CLI build outputs
+.angular/cache/
+dist/
+coverage/
+out-tsc/
